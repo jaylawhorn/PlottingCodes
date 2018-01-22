@@ -15,7 +15,7 @@
 #
 #	Final Selection
 #
-"Loose b-tag Veto"	"(nBTagJet_loose==0)"
+"Loose b-tag Veto"	"((nBTagJet_loose==0)&&(btag0Wgt>0))"
 "pfMET_Corr>50"		"(pfMET_Corr>50)"
 "Tau2/1"		"((PuppiAK8_jet_tau2tau1<0.55))"
 "m_{J}>65 && m_{J}<105"	"((PuppiAK8_jet_mass_so>65) && (PuppiAK8_jet_mass_so<105))"

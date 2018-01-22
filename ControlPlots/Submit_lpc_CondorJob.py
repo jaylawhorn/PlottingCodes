@@ -17,7 +17,7 @@ TestRun = 0
 # 0 => Signal,	1 => TTbar
 # 2 => Wjet,	3 => mjj
 # 4 => Limit
-WhichJob = 0
+WhichJob = 2
 #
 #	Signal/bkg comparison
 #
@@ -31,7 +31,7 @@ if WhichJob == 0:
 #	TTbar Control Region
 #
 if WhichJob == 1:
-	OUTDIR = 'ControlPlots/TTbar'
+	OUTDIR = 'ControlPlots/TTbar_No_btagWeight'
 	RunFile = 'RunMacro_TTbar.C'
 	JobName = 'TTbar'
 	CopyFiles = ['RunMacro_TTbar.C', 'DibosonBoostedElMuCuts13TeV_TTBarControlRegion_CHS.txt', 'DibosonBoostedElMuSamples13TeV.txt', 'myControlPlots.C', 'controlplotvars_CHS.h' , 'TTbarControlRegion.root']
@@ -40,7 +40,7 @@ if WhichJob == 1:
 #	Wjet Control Region
 #
 if WhichJob == 2:
-	OUTDIR = 'ControlPlots/Wjets'
+	OUTDIR = 'ControlPlots/Wjets_No_btagWeight'
 	RunFile = 'RunMacro_Wjet.C'
 	JobName = 'Wjets'
 	CopyFiles = ['RunMacro_Wjet.C', 'DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS.txt', 'DibosonBoostedElMuSamples13TeV.txt', 'myControlPlots.C', 'controlplotvars_CHS.h', 'WjetControlRegion.root']

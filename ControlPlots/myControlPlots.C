@@ -175,8 +175,9 @@ public:
 #endif
     if (info_.nMCevents) {
       //cout<<"\n===> Evetns = "<<info_.xsecpblumi<<"\t"<<info_.nMCevents<<"\t"<<info_.MCnegEvent<<"\t"<<info_.colorcode<<endl;
-      histo->Scale((info_.xsecpblumi*info_.otherscale)/(info_.nMCevents - 2*info_.MCnegEvent));
-      cout << ", " <<histo->IntegralAndError(1,histo->GetNbinsX(),tmp) << " " <<tmp<< " " << (histo->Integral(1,histo->GetNbinsX()+1)*info_.xsecpblumi*info_.otherscale)/(info_.nMCevents - 2*info_.MCnegEvent) << " " << " scaled events in window";
+      //histo->Scale((info_.xsecpblumi*info_.otherscale)/(info_.nMCevents - 2*info_.MCnegEvent));
+      histo->Scale(info_.otherscale);
+      cout << ", " <<histo->IntegralAndError(1,histo->GetNbinsX(),tmp) << " " <<tmp<< " " << (histo->Integral(1,histo->GetNbinsX()+1)) << " " << " scaled events in window";
     }
     cout << endl;
 
@@ -347,7 +348,7 @@ void myControlPlots(const char *cuttablefilename,
 
     //TCut the_cut(TString("genWeight*trig_eff_Weight*id_eff_Weight*(")+unwtcutstring+TString(")"));
     //TCut the_cut(TString("genWeight*trig_eff_Weight*id_eff_Weight*(")+unwtcutstring+TString(")"));
-    TCut the_cut(TString("btag0Wgt*genWeight*trig_eff_Weight*id_eff_Weight*pu_Weight*(")+unwtcutstring+TString(")"));
+    TCut the_cut(TString("wSampleWeight*btag0Wgt*genWeight*trig_eff_Weight*id_eff_Weight*pu_Weight*(")+unwtcutstring+TString(")"));
     //TCut the_cut(unwtcutstring);
     //TCut the_cutE(TString("effwt*puwt*puwt*(")+unwtcutstring+TString(")"));
 
@@ -853,7 +854,7 @@ void myControlPlots(const char *cuttablefilename,
     c1->Print(outfile+".pdf");
     c1->Print(outfile+".png");
     c1->Print(outfile+".C");
-    c1->Print(outfile+".tex");
+    //c1->Print(outfile+".tex");
     //-----------------------------------------------------------------
     //	Save log plot
     //-----------------------------------------------------------------

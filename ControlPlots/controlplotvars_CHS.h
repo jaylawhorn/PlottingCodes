@@ -9,6 +9,8 @@ const plotVar_t commonplotvars_chs[] = {
 //    LEPTONS
 //  { "BDT_response", -1.0,1.0,20,1, "BDT Response",  "BDT_response", -1.0, 1.0, 20, 1},
  { "mass_lvj_type0", 	0, 2400, 8, 1, "WW invariant mass (GeV)",		"mass_lvj_type0",    0, 2400, 8, 1},
+ { "mass_lvj_type0", 	0, 2400, 24, 1, "WW invariant mass (GeV)",		"mass_lvj_type0_24bin",    0, 2400, 24, 1},
+ { "mass_lvj_type0", 	600, 4000, 68, 1, "WW invariant mass (GeV)",		"mass_lvj_type0Range600_4000",    600, 4000, 68, 1},
  { "PuppiAK8jet_e3_sdb1/(PuppiAK8jet_e2_sdb1*PuppiAK8jet_e2_sdb1*PuppiAK8jet_e2_sdb1)", 	0.05,3.5,25, 1, "D2",	"d2_ECF", 0.05,3.5,25, 1},
  { "PuppiAK8jet_e3_v2_sdb1/(PuppiAK8jet_e2_sdb1*PuppiAK8jet_e2_sdb1)", 	0.00,0.5,25, 1, "N2",	"n2_ECF", 0.00,0.5,25, 1},
  { "ungroomed_PuppiAK8_jet_pt+vbf_maxpt_j1_pt+vbf_maxpt_j2_pt",	500, 2100, 8, 3, "HT", "ht", 500, 2100, 8, 1},
@@ -47,7 +49,7 @@ const plotVar_t commonplotvars_chs[] = {
  { "PuppiAK8_jet_mass_tr", 	40, 150, 11, 3, "AK8 tr mass (GeV)", 		"AK8_mass_tr", 40.0, 150, 11, 1},
 // { "PuppiAK8_jet_mass", 	65, 105, 5, 1, "AK8 mass (GeV)",		"AK8_mass",    65, 105, 5, 1},
 // { "PuppiAK8_jet_mass_pr", 	65, 105, 5, 1, "AK8 pruned mass (GeV)",		"AK8_mass_pr", 65, 105, 5, 1},
-// { "PuppiAK8_jet_mass_so", 	65, 105, 5, 1, "AK8 Softdrop mass (GeV)",	"AK8_mass_so", 65, 105, 5, 1},
+ { "PuppiAK8_jet_mass_so", 	65, 105, 5, 1, "AK8 Softdrop mass (GeV)",	"AK8_mass_so_sRange", 65, 105, 5, 1},
 // { "PuppiAK8_jet_mass_tr", 	65, 105, 5, 1, "AK8 tr mass (GeV)", 		"AK8_mass_tr", 65, 105, 5, 1},
  { "PuppiAK8_jet_sj1_pt",	0, 800, 25, 1, "AK8 SJ1 pT (GeV)",	"PuppiAK8_jet_sj1_pt", 0, 800, 25, 1},
  { "PuppiAK8_jet_sj1_eta",	-2.4, 2.4, 25, 1, "AK8 SJ1 #eta",	"PuppiAK8_jet_sj1_eta", -2.4, 2.4, 25, 1},

@@ -1,0 +1,11 @@
+imax 1 number of channels
+jmax * number of background
+kmax * number of nuisance parameters
+shapes * * SMEWK.root ZV/$PROCESS ZV/$PROCESS_$SYSTEMATIC
+shapes data_obs * SMEWK.root ZV/dataZV
+bin bin1
+Observation -1
+bin bin1 bin1 bin1 bin1 bin1
+process EWKZV DibosonZV topZV VjetsZV QCDZV
+process 0 1 2 3 4 
+rate -1.00000 -1.00000  -1.00000  -1.00000  -1.00000

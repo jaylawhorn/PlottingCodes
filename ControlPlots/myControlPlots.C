@@ -43,10 +43,12 @@ typedef struct {
 }
 SampleInfo_t;
 
+#include "Zll_Vjj.h"
+#include "Wlv_Vjj.h"
 //#include "controlplotvars_boosted.h"
 //#include "controlplotvars_common.h"
-#include "controlplotvars_CHS.h"
-#include "controlplotvars_CHS_2lep.h"
+//#include "controlplotvars_CHS.h"
+//#include "controlplotvars_CHS_2lep.h"
 //#include "controlplotvars_Puppi.h"
 //#include "controlplotvars_vbf.h"
 //#include "controlplotvars_mva.h"
@@ -254,7 +256,7 @@ void loadSamples(const char *filename,vector<Sample *>& samples)
 
 void myControlPlots(const char *cuttablefilename,
 		    const char *samplefilename,
-		    const plotVar_t plotvars[] = commonplotvars_chs,
+		    const plotVar_t plotvars[], //commonplotvars_chs,
 		    const string OutRootFile = "testrk.root",
 		    const int ScaleSignal = 0,
 		    const string RecreateAppend = "RECREATE",

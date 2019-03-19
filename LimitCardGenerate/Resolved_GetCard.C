@@ -57,7 +57,8 @@ public:
     tree_ = 0;
     //cout << "sample = " << name_ << endl;
     //TFile *f = new TFile (sinfo.treefilename, "READ"); if (!f) { cerr << "Couldn't find file " << sinfo.treefilename << endl; return; }
-    TFile *f =  TFile::Open("root://cmseos.fnal.gov/"+sinfo.treefilename, "READ"); if (!f) { cerr << "Couldn't find file " << sinfo.treefilename << endl; return; }
+    //TFile *f =  TFile::Open("root://cmseos.fnal.gov/"+sinfo.treefilename, "READ"); if (!f) { cerr << "Couldn't find file " << sinfo.treefilename << endl; return; }
+    TFile *f =  TFile::Open("root://eoscms.cern.ch/"+sinfo.treefilename, "READ"); if (!f) { cerr << "Couldn't find file " << sinfo.treefilename << endl; return; }
     tree_ =  (TTree *)f->Get("otree"); if (!tree_) { cerr << "Couldn't find tree otree in file " << sinfo.treefilename << endl; return; }
   }
   ~Sample() { if (tree_) delete tree_; }
